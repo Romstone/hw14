@@ -57,6 +57,10 @@ function getCount(){
 
 function countChar(str,c){
     const count_res = document.getElementById('res_calc');
+    if (str.length === 0) {
+        count_res.textContent = 'Empty string';
+        return;
+    }
     let count = 0;
     str = str.split('');
     for (const strElement of str) {
@@ -68,6 +72,6 @@ function countChar(str,c){
 }
 
 /*str.replace(/\s/g, '').length is a method which searches all (g as global)
-whitespaces (\s) and replaces them with empty space (''), then returns it's
+whitespaces (\s) and replaces them with empty space (''), then returns its
 length
 This method is used to check if the input string contains only spaces */
